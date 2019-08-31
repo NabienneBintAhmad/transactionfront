@@ -1,0 +1,36 @@
+ <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"> N@bienne's Transaction</a>
+      </div>
+      <ul class="nav nav-bar pull-right">
+        <li>
+           <a *ngIf="!loggedIn()" routerLink="/login">LogIn</a>
+           <a *ngIf="loggedIn()" (Click)="logout()">LogOut</a>
+         </li>
+
+      </ul> 
+
+      <ul class="nav navbar-nav pull-left">
+          <li ><a routerLink="/acceuil" routerLinkActive="active">Accueil</a></li>
+          
+          <li *ngIf="isSuperadmin()" ><a routerLink="/register" routerLinkActive="active">Registration</a></li>
+          <li *ngIf="isSuperadmin()"><a routerLink="/bloquer" routerLinkActive="active">Bloquer UserSystem</a></li>
+          <li *ngIf="isSuperadmin()"><a routerLink="/caissier" routerLinkActive="active">Ajout Caissier</a></li>
+          <li *ngIf="isAdmin()"><a routerLink="/user" routerLinkActive="active">Ajout UserPrestataire</a></li>
+          <li *ngIf="isUser()"><a routerLink="/transaction" routerLinkActive="active">Transaction</a></li>
+          <li *ngIf="isAdmin()"><a routerLink="/admin" routerLinkActive="active">Bloquer UserPrestataire</a> </li>
+      </ul>
+
+    </div>
+  </nav>
+  
+  <div class="row">
+    <div class="col-md-2">
+      <app-login></app-login>
+    </div>
+    <div class="col-md-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+    

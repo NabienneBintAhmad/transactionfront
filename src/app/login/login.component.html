@@ -1,0 +1,18 @@
+<div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Authentification</div>
+       <div class="panel-body">
+       <form class="Form" >
+         <div class="form-group">
+           <label class="control-label">Username</label>
+           <input [(ngModel)]="loginUserData.username"  type="text" name="username"  class="form-control">
+         </div>
+         <div class="form-group">
+            <label class="control-label">Password </label>
+            <input [(ngModel)]="loginUserData.password" type="password" name="password" class="form-control">
+          </div>
+          <button (click)="login(loginUserData)" type="submit" class="btn btn-success">Login</button>
+       </form>
+      </div> 
+    </div>   
+    </div>
