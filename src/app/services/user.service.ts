@@ -18,6 +18,7 @@ export class UserService {
     formData1.append('email', formData.imail);
     formData1.append('contact', formData.contact);
     formData1.append('cni', formData.cni);
+    formData1.append('matriculeEntreprise', formData.matriculeEntreprise);
     console.log(formData);
     return this.httpClient.post<any>(this.endpoint, formData1, {observe: 'response'});
     }

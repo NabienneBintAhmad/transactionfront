@@ -56,12 +56,14 @@
                 <label class="control-label">Email </label>
                 <input [(ngModel)]="userData.email" type="email" name="email" class="form-control">
             </div>
+            <div class="form-group">
+                <label class="control-label">Matricule Entreprise </label>
+                <input [(ngModel)]="userData.matriculeEntreprise" type="texte" name="matriculeEntreprise" class="form-control">
+            </div>
            
-        <button (click)="ajoutCaissier()" type="submit" class="btn btn-success">register</button>
+        <button (click)="ajoutCaissier()" type="submit" class="btn btn-success">Ajouter</button>
      </form>
     </div> 
   </div>   
   </div>
-<p>
-  user works!
-</p>
+
