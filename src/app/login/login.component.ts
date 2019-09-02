@@ -40,11 +40,6 @@ login(loginUserData) {
         console.log(resp);
         const jwt: any = resp.body;
         this.authentService.saveToken(jwt);
-        // localStorage.setItem('token', resp.body);
-        if (this.isSuperadmin()) {
-          this.router.navigate(['/register']);
-        }
-
       },
       err => console.log(err)
     );

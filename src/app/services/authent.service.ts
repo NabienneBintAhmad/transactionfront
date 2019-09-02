@@ -24,7 +24,7 @@ roles = [''];
   getToken() {
     return localStorage.getItem('token');
   }
- 
+
   saveToken(jwt: any) {
     localStorage.setItem('token', jwt['token']);
     this.jwt = jwt['token'];
@@ -56,8 +56,10 @@ roles = [''];
   }
   logout() {
     localStorage.removeItem('token');
-    this.router.navigate(['/login']);
-     }
+    this.jwt = undefined;
+    this.username = undefined;
+    this.jwt = undefined;
+ }
   loadToken() {
     this.jwt = localStorage.getItem('token');
     this.parseJWT();

@@ -28,10 +28,10 @@ export class AppComponent {
     return this.authservice.isAuthenticated();
   }
   logout() {
-    return this.authservice.logout ();
+    return this.authservice.logout();
   }
   loggedIn() {
-    return this.authservice.loggedIn ();
+    return this.authservice.loggedIn();
   }
 }
 

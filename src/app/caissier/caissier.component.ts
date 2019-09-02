@@ -33,5 +33,14 @@ export class CaissierComponent implements OnInit {
         }
       );
   }
+/*   depot() {
+    this.depotService.depot(this.depotData)
+      .subscribe(
+        data => {
+          console.log(data);
 
+        }
+      );
+  } */
 }
+

@@ -6,7 +6,10 @@
       <ul class="nav nav-bar pull-right">
         <li>
            <a *ngIf="!isAuthenticated()" routerLink="/login">LogIn</a>
-           <a *ngIf="isAuthenticated()" style="cursor:pointer" (Click)="authentService.logout()">LogOut</a>
+           <a *ngIf="isAuthenticated()"  (Click)="logout()" class="btn" >LogOut</a>
+         </li>
+         <li>
+          
          </li>
 
       </ul> 
@@ -20,6 +23,7 @@
           <li *ngIf="isAdmin()"><a routerLink="/user" routerLinkActive="active">Ajout UserPrestataire</a></li>
           <li *ngIf="isUser()"><a routerLink="/transaction" routerLinkActive="active">Transaction</a></li>
           <li *ngIf="isAdmin()"><a routerLink="/admin" routerLinkActive="active">Bloquer UserPrestataire</a> </li>
+          <li *ngIf="isCaissier"><a routerLink="/depot" routerLinkActive="active">Dépot</a> </li>
       </ul>
 
     </div>
