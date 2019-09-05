@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthentService } from '../services/authent.service';
+import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -37,7 +38,7 @@ login(loginUserData) {
   this.authentService.login(loginUserData)
     .subscribe(
       resp => {
-        console.log(resp);
+        Swal.fire('Connexion réussie!');
         const jwt: any = resp.body;
         this.authentService.saveToken(jwt);
       },

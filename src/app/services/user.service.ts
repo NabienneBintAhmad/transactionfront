@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class UserService {
   private endpoint = 'http://127.0.0.1:8000/api/users';
   constructor(private httpClient: HttpClient) {}
-  ajoutCaissier(formData) {
+  ajoutUser(formData) {
     const formData1: FormData = new FormData();
     formData1.append('username', formData.username);
     formData1.append('password', formData.password);
@@ -18,7 +18,6 @@ export class UserService {
     formData1.append('email', formData.imail);
     formData1.append('contact', formData.contact);
     formData1.append('cni', formData.cni);
-    formData1.append('matriculeEntreprise', formData.matriculeEntreprise);
     console.log(formData);
     return this.httpClient.post<any>(this.endpoint, formData1, {observe: 'response'});
     }

@@ -11,7 +11,6 @@ export class DepotService {
     const formData1: FormData = new FormData();
     formData1.append('numero', formData.numero);
     formData1.append('montant', formData.montant);
-    formData1.append('matricule', formData.matricule);
     console.log(formData);
     return this.httpClient.post<any>(this.endpoint, formData1, {observe: 'response'});
     }

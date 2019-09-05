@@ -9,6 +9,7 @@ import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import { BlocageComponent } from './blocage/blocage.component';
 import { DepotComponent } from './depot/depot.component';
+import { RetraitComponent } from './retrait/retrait.component';
 import { AuthentGuard } from './guards/authent.guard';
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'transaction', component: TransactionComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'bloquer', component: BlocageComponent},
-  { path: 'depot', component: DepotComponent}
+  { path: 'depot', component: DepotComponent},
+  { path: 'retrait', component: RetraitComponent}
 
 ];
 

@@ -18,6 +18,7 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { PrestataireComponent } from './prestataire/prestataire.component';
 import { BlocageComponent } from './blocage/blocage.component';
 import { DepotComponent } from './depot/depot.component';
+import { RetraitComponent } from './retrait/retrait.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DepotComponent } from './depot/depot.component';
     AdminComponent,
     PrestataireComponent,
     BlocageComponent,
-    DepotComponent
+    DepotComponent,
+    RetraitComponent
   ],
   imports: [
     BrowserModule,

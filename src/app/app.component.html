@@ -5,8 +5,8 @@
       </div>
       <ul class="nav nav-bar pull-right">
         <li>
-           <a *ngIf="!isAuthenticated()" routerLink="/login">LogIn</a>
-           <a *ngIf="isAuthenticated()"  (Click)="logout()" class="btn" >LogOut</a>
+           <a routerLink="/login" routerLinkActive="active">LogIn</a>
+
          </li>
          <li>
           
@@ -21,9 +21,10 @@
           <li *ngIf="isSuperadmin()"><a routerLink="/bloquer" routerLinkActive="active">Bloquer UserSystem</a></li>
           <li *ngIf="isSuperadmin()"><a routerLink="/caissier" routerLinkActive="active">Ajout Caissier</a></li>
           <li *ngIf="isAdmin()"><a routerLink="/user" routerLinkActive="active">Ajout UserPrestataire</a></li>
-          <li *ngIf="isUser()"><a routerLink="/transaction" routerLinkActive="active">Transaction</a></li>
+          <li *ngIf="isUser()"><a routerLink="/transaction" routerLinkActive="active">Envoie</a></li>
           <li *ngIf="isAdmin()"><a routerLink="/admin" routerLinkActive="active">Bloquer UserPrestataire</a> </li>
-          <li *ngIf="isCaissier"><a routerLink="/depot" routerLinkActive="active">Dépot</a> </li>
+          <li *ngIf="isUser()"><a routerLink="/retrait" routerLinkActive="active">Retrait</a> </li>
+          <li *ngIf="isCaissier()"><a routerLink="/depot" routerLinkActive="active">Dépot</a> </li>
       </ul>
 
     </div>
@@ -37,4 +38,4 @@
       <router-outlet></router-outlet>
     </div>
   </div>
-    
+  

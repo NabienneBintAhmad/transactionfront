@@ -12,6 +12,10 @@ private host = 'http://localhost:8000/api/login_check';
 jwt = '';
 username = '';
 roles = [''];
+statut = '';
+compteTravail;
+id;
+exp;
   constructor(private http: HttpClient, private router: Router) { }
 
 
@@ -27,17 +31,37 @@ roles = [''];
 
   saveToken(jwt: any) {
     localStorage.setItem('token', jwt['token']);
+ /*    localStorage.setItem('username', jwt['username']);
+    localStorage.setItem('roles', jwt['roles']);
+    localStorage.setItem('exp', jwt['exp']);
+    localStorage.setItem('statut', jwt['statut']);
+    localStorage.setItem('id', jwt['id']);
+    localStorage.setItem('compteTravail', jwt['compteTravail']); */
     this.jwt = jwt['token'];
+  /*   this.jwt = jwt['username'];
+    this.jwt = jwt['roles'];
+    this.jwt = jwt['exp'];
+    this.jwt = jwt['statut'];
+    this.jwt = jwt['id'];
+    this.jwt = jwt['compteTravail']; */
     this.parseJWT();
-    // console.log(this.parseJWT());
+    console.log(this.parseJWT());
   }
   parseJWT() {
     const jwtHelper = new JwtHelperService();
     const objJWT = jwtHelper.decodeToken(this.jwt);
     this.username = objJWT.username;
     this.roles = objJWT.roles;
+    this.statut = objJWT.statut;
+    this.id = objJWT.id;
+    this.exp = objJWT.exp;
+    this.compteTravail = objJWT.compteTravail;
     console.log(this.username);
     console.log(this.roles);
+    console.log(this.statut);
+    console.log(this.compteTravail);
+    console.log(this.id);
+    console.log(this.exp);
   }
    isSuperadmin() {
      return this.roles.indexOf('ROLE_SUPERADMIN') >= 0;

@@ -1,11 +1,10 @@
 
 <div class="col-md-12">
   <div class="panel panel-default">
-    <div class="panel-heading" style="text-align:center"> <h1> Registration</h1></div>
+    <div class="panel-heading" style="text-align:center"> <h1> Ajout User Prestataire</h1></div>
      <div class="panel-body">
      <form #imageForm=ngForm class="form" >
-        <div class="panel-heading" style="text-align:center"> <h3> Information Administrateur</h3></div>
-       <div class="form-group">
+         <div class="form-group">
          <label class="control-label">Username</label>
          <input [(ngModel)]="userData.username" type="text" name="username"  class="form-control">
        </div>
@@ -56,12 +55,9 @@
                 <label class="control-label">Email </label>
                 <input [(ngModel)]="userData.email" type="email" name="email" class="form-control">
             </div>
-            <div class="form-group">
-                <label class="control-label">Matricule Entreprise </label>
-                <input [(ngModel)]="userData.matriculeEntreprise" type="texte" name="matriculeEntreprise" class="form-control">
-            </div>
+            
            
-        <button (click)="ajoutCaissier()" type="submit" class="btn btn-success">Ajouter</button>
+        <button (click)="ajoutUser()" type="submit" class="btn btn-success">Ajouter</button>
      </form>
     </div> 
   </div>   

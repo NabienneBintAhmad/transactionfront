@@ -23,8 +23,8 @@ export class UserComponent implements OnInit {
     };
     reader.readAsDataURL(this.userData.imageFile);
   }
-  ajoutCaissier() {
-    this.userService.ajoutCaissier(this.userData)
+  ajoutUser() {
+    this.userService.ajoutUser(this.userData)
       .subscribe(
         data => {
           console.log(data);

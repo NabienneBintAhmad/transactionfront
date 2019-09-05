@@ -2,25 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { TransactionService } from '../services/transaction.service';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-transaction',
-  templateUrl: './transaction.component.html',
-  styleUrls: ['./transaction.component.css']
+  selector: 'app-retrait',
+  templateUrl: './retrait.component.html',
+  styleUrls: ['./retrait.component.css']
 })
-export class TransactionComponent implements OnInit {
-  envoieData = {};
+export class RetraitComponent implements OnInit {
+  retraitData = {};
   constructor(private transactionService: TransactionService, private router: Router) { }
   ngOnInit() {
   }
 
-  envoie() {
-    this.transactionService.envoie(this.envoieData)
+  retrait() {
+    this.transactionService.retrait(this.retraitData)
       .subscribe(
         data => {
           console.log(data);
-    }
+        }
       );
   }
-
 }
 
 
