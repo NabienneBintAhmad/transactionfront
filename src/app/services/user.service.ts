@@ -15,7 +15,7 @@ export class UserService {
     formData1.append('nom', formData.nom);
     formData1.append('prenom', formData.prenom);
     formData1.append('adresse', formData.adresse);
-    formData1.append('email', formData.imail);
+    formData1.append('email', formData.email);
     formData1.append('contact', formData.contact);
     formData1.append('cni', formData.cni);
     console.log(formData);

@@ -5,19 +5,19 @@
      <form class="Form" >
        <div class="form-group">
          <label class="control-label">Code Retrait</label>
-         <input [(ngModel)]="retrait.code"  type="number" name="code"  class="form-control">
+         <input [(ngModel)]="retraitData.code"  type="number" name="code"  class="form-control">
        </div>
        <div class="form-group">
           <label class="control-label">Nom Envoyeur </label>
-          <input [(ngModel)]="retrait.envoyeurNomComplet" type="text" name="envoyeurNomComplet" class="form-control">
+          <input [(ngModel)]="retraitData.envoyeurNomComplet" type="text" name="envoyeurNomComplet" class="form-control">
         </div>
         <div class="form-group">
           <label class="control-label">Nom Recepteur </label>
-          <input [(ngModel)]="retrait.recepteurNomComplet" type="text" name="recepteurNomComplet" class="form-control">
+          <input [(ngModel)]="retraitData.recepteurNomComplet" type="text" name="recepteurNomComplet" class="form-control">
         </div>
         <div class="form-group">
           <label class="control-label">Cni Recepteur </label>
-          <input [(ngModel)]="retrait.recepteurCni" type="number" name="recepteurCni" class="form-control">
+          <input [(ngModel)]="retraitData.recepteurCni" type="number" name="recepteurCni" class="form-control">
         </div>
         <button (click)="retrait()" type="submit" class="btn btn-success">Retirer</button>
      </form>

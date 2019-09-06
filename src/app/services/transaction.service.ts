@@ -24,7 +24,7 @@ export class TransactionService {
       formData2.append('montant', formData.montant);
       formData2.append('envoyeurNomComplet', formData.envoyeurNomComplet);
       formData2.append('recepteurNomComplet', formData.recepteurNomComplet);
-      formData2.append('recepteurCni', formData.recepteurCni);
+      formData2.append('envoyeurCni', formData.recepteurCni);
       console.log(formData);
       return this.httpClient.post<any>(this.endpoint1, formData2, {observe: 'response'});
       }

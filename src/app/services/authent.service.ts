@@ -31,19 +31,8 @@ exp;
 
   saveToken(jwt: any) {
     localStorage.setItem('token', jwt['token']);
- /*    localStorage.setItem('username', jwt['username']);
-    localStorage.setItem('roles', jwt['roles']);
-    localStorage.setItem('exp', jwt['exp']);
-    localStorage.setItem('statut', jwt['statut']);
-    localStorage.setItem('id', jwt['id']);
-    localStorage.setItem('compteTravail', jwt['compteTravail']); */
     this.jwt = jwt['token'];
-  /*   this.jwt = jwt['username'];
-    this.jwt = jwt['roles'];
-    this.jwt = jwt['exp'];
-    this.jwt = jwt['statut'];
-    this.jwt = jwt['id'];
-    this.jwt = jwt['compteTravail']; */
+   
     this.parseJWT();
     console.log(this.parseJWT());
   }
