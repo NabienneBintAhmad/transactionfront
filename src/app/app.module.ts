@@ -19,6 +19,7 @@ import { PrestataireComponent } from './prestataire/prestataire.component';
 import { BlocageComponent } from './blocage/blocage.component';
 import { DepotComponent } from './depot/depot.component';
 import { RetraitComponent } from './retrait/retrait.component';
+import { CompteComponent } from './compte/compte.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RetraitComponent } from './retrait/retrait.component';
     PrestataireComponent,
     BlocageComponent,
     DepotComponent,
-    RetraitComponent
+    RetraitComponent,
+    CompteComponent
   ],
   imports: [
     BrowserModule,
