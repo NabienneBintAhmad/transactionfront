@@ -27,7 +27,13 @@ export class UserComponent implements OnInit {
     this.userService.ajoutUser(this.userData)
       .subscribe(
         data => {
+          window.confirm('Inséré!');
           console.log(data);
+
+        },
+        err => {
+          window.confirm('Pas inséré!');
+          console.log(err);
 
         }
       );

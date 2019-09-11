@@ -1,12 +1,11 @@
 
-  <div class="wrappe" >
-    <div class="sidebar" data-color="white" data-active-color="success">
+  <div class="wrappe" *ngIf="isAuthenticated()">
+    <div class="sidebar" data-color="white" data-active-color="success" *ngIf="isAuthenticated()">
     <div class="logo">
           <div class="logo-image-small float-left">
             <img src="../assets/img/halal.jpg">
-            
-      </div>
-      </div>
+          </div>
+    </div>
       
       <div class="sidebar-wrapper" data-active-color="success">
         <ul class="nav">
@@ -69,11 +68,20 @@
           </li>
 
           <li *ngIf="isAdmin()">
-            <a href="#">
-              <i class="nc-icon nc-key-25"></i>
-              <a routerLink="/admin" routerLinkActive="active" data-active-color="success">Bloquer UserPrestataire</a>
-            </a>
-          </li>
+              <a href="#">
+                <i class="nc-icon nc-tile-56"></i>
+                <a routerLink="/userslist" routerLinkActive="active" data-active-color="success">liste Users</a>
+              </a>
+            </li>
+
+            <li *ngIf="isAdmin()">
+              <a href="#">
+                <i class="nc-icon nc-key-25"></i>
+                <a routerLink="/blockuserpresta" routerLinkActive="active" data-active-color="success">Bloqer user</a>
+              </a>
+            </li>
+
+       
 
           <li *ngIf="isSuperadmin()">
             <a href="#">
@@ -85,7 +93,7 @@
           <li *ngIf="isAdmin()">
             <a href="#">
               <i class="nc-icon nc-single-02"></i>
-              <a routerLink="/user" routerLinkActive="active" data-active-color="success">Ajout User Prestataire</a>
+              <a routerLink="/user" routerLinkActive="active" data-active-color="success">Ajout Users</a>
             </a>
           </li>
          
@@ -99,15 +107,15 @@
         </ul>
       </div>
     </div>
-    <div class="main-panel">
+    <div class="main-panel" *ngIf="isAuthenticated()">
   <nav class="navbar menu" > 
     <div class="container-fluid" >
   
-      <ul class="login">
+      <ul class="login" >
         <li>
-           <a *ngIf="isAuthenticated()" routerLink="/login" ><span class="glyphicon glyphicon-log-in"></span> LogIn          
+           <a *ngIf="!isAuthenticated()" routerLink="/login" ><span class="glyphicon glyphicon-log-in"></span> LogIn          
           </a>
-          <a *ngIf="!isAuthenticated()"  (click)="logedIn()"> LogOut        
+          <a *ngIf="isAuthenticated()"  style="cursor: pointer" routerLink="/login" (click)="logout()"> <span class="glyphicon glyphicon-log-in"></span>  LogOut        
           </a>
          </li>  
       </ul> 
@@ -118,7 +126,7 @@
   
    
     </div>
-  </div>
+ </div>
     <div class="col-md-12">
       <router-outlet></router-outlet>
     </div>

@@ -68,11 +68,13 @@ exp;
     return this.roles && (this.isAdmin || this.isCaissier || this.isSuperadmin || this.isUser);
   }
   logout() {
+    if (window.confirm('Vous etes sure de vouloir déconnecter ?')) {
     localStorage.removeItem('token');
     this.jwt = undefined;
     this.username = undefined;
-    this.jwt = undefined;
+    this.roles = undefined;
  }
+}
   loadToken() {
     this.jwt = localStorage.getItem('token');
     this.parseJWT();

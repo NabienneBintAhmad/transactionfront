@@ -16,9 +16,13 @@ export class TransactionComponent implements OnInit {
     this.transactionService.envoie(this.envoieData)
       .subscribe(
         data => {
+          window.confirm('Envoi réusssi');
           console.log(data);
-    }
-      );
+    },
+    err => {
+      window.confirm('Envoi échoué !');
+      console.log(err);
+    });
   }
 
 }

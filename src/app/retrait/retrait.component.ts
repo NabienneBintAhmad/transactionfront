@@ -16,7 +16,12 @@ export class RetraitComponent implements OnInit {
     this.transactionService.retrait(this.retraitData)
       .subscribe(
         data => {
+          window.confirm('Retrait réussi!');
           console.log(data);
+        },
+        err => {
+          window.confirm('Retrait échoué!');
+          console.log(err);
         }
       );
   }

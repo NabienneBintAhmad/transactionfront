@@ -28,7 +28,8 @@ export class CaissierComponent implements OnInit {
     this.caissierService.ajoutCaissier(this.caissierUserData)
       .subscribe(
         data => {
-          console.log(data);
+         window.confirm('Caissier ajouté');
+         console.log(data);
 
         }
       );

@@ -1,9 +1,47 @@
-<div id="container">
-	<h2>Bloquer</h2>
-	<p>Entrer l'utilisateur à bloquer</p>
-	<form>
-		<input type="email" placeholder="Entrer son email" required>
-			<br>
-		<button>Bloquer</button>
-	</form>
-</div>
+
+<div  class="col-md-9 align-content-center container">
+
+		<!-- Show it when there is no user -->
+		<div class="no-data text-center" >
+		  <button class="btn btn-outline-primary" routerLink="/user">Ajout User</button>
+		</div>
+	
+		
+		<!-- userlists list table, it hides when there is no userlist -->
+		<div class="form-group col-lg-6">
+		  <h3 class="mb-3 text-center">Blocage</h3>
+	  
+		  <div class="form-group col-lg-6">
+			<table class="table table-bordered">
+			  <thead>
+				<tr>
+				  <th scope="col"> Id</th>
+				  <th scope="col">Username</th>
+				  <th scope="col">Role</th>
+				  <th scope="col">Statut</th>
+				  <th scope="col">Photo</th>
+				  <th scope="col">Date</th>
+				  <th scope="col">Blocage</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr *ngFor="let userlist of Userlist">
+				  <td>{{userlist.id}}</td>
+				  <td>{{userlist.username}}</td>
+				  <td>{{userlist.roles}}</td>
+				  <td>{{userlist.statut}}</td>
+				  <td>{{userlist.imageName}}</td>
+				  <td>{{userlist.updatedAt}}</td>
+				 
+				  <td>
+						<button *ngIf="userlist.statut == 'Debloquer'" class="btn btn-outline-danger" (click)="bloquerUserlist(userlist.username)">Bloquer</button>
+						<button *ngIf="userlist.statut == 'Bloquer'" class="btn btn-outline-success" (click)="debloquerUserlist(userlist.username)">Debloquer</button>
+				</td>
+				</tr>
+			  </tbody>
+			</table>
+		  </div>
+	  
+		</div>
+	  
+	  </div>

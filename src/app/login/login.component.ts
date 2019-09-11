@@ -11,7 +11,6 @@ loginUserData = {};
   constructor(private authentService: AuthentService , private router: Router) { }
 
   ngOnInit(): void {
-    this.router.navigateByUrl('/login');
   }
    isSuperadmin() {
     return this.authentService.isSuperadmin();
@@ -38,12 +37,16 @@ login() {
   this.authentService.login(this.loginUserData)
     .subscribe(
       resp => {
+        window.confirm('Connexion réussie');
         console.log(resp);
         const jwt: any = resp.body;
         this.authentService.saveToken(jwt);
         this.router.navigateByUrl('/acceuil');
       },
-      err => console.log(err)
+      err => {
+        console.log(err);
+        window.confirm('Connexion échouée, rassayer');
+      }
     );
 }
 

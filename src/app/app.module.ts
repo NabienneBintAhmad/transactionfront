@@ -24,6 +24,7 @@ import { CaissierlistComponent } from './caissierlist/caissierlist.component';
 import { MenuComponent } from './menu/menu.component';
 import { PrestatairelistComponent } from './prestatairelist/prestatairelist.component';
 import { BlockusersystemComponent } from './blockusersystem/blockusersystem.component';
+import { UserlistComponent } from './userlist/userlist.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { BlockusersystemComponent } from './blockusersystem/blockusersystem.comp
     MenuComponent,
     PrestatairelistComponent,
     BlockusersystemComponent,
+    UserlistComponent,
   ],
   imports: [
     BrowserModule,

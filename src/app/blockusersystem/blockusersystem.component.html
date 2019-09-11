@@ -3,7 +3,7 @@
 
     <!-- Show it when there is no user -->
     <div class="no-data text-center" >
-      <button class="btn btn-outline-primary" routerLink="/user">Ajout Caisier</button>
+      <button class="btn btn-outline-primary" routerLink="/caissier">Ajout Caisier</button>
     </div>
     <div class="no-data text-center" >
         <button class="btn btn-outline-primary" routerLink="/register">Registration</button>
@@ -17,7 +17,7 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th scope="col">User Id</th>
+              <th scope="col"> Id</th>
               <th scope="col">Username</th>
               <th scope="col">Role</th>
               <th scope="col">Statut</th>
@@ -36,7 +36,9 @@
               <td>{{userlist.updatedAt}}</td>
              
               <td>
-                <button class="btn btn-outline-danger" (click)="bloquerUserlist(userlist.imageName)">Bloquer</button>
+                <button *ngIf="userlist.statut == 'Bloquer'" class="btn btn-outline-success" (click)="debloquerUserlist(userlist.username)">Debloquer</button>
+                <button *ngIf="userlist.statut == 'Debloquer'" class="btn btn-outline-danger" (click)="bloquerUserlist(userlist.username)">Bloquer</button>
+             
               </td>
             </tr>
           </tbody>

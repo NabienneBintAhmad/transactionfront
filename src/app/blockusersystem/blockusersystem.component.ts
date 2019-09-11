@@ -15,18 +15,29 @@ export class BlockusersystemComponent implements OnInit {
   }
 
   loadUsers() {
-
-  return this.userService.getUserlist().subscribe((data:Userlist []) => {
+  return this.userService.getUserlist().subscribe((data) => {
       this.Userlist = data;
       console.log(data);
     },
      err => console.log(err)
     );
   }
-  bloquerUserlist(username) {
+  bloquerUserlist(username: string) {
     if (window.confirm('Vous etes sure de vouloir bloquer ce User ?')) {
+      // console.log(username);
       this.userService.bloquerUserlist(username).subscribe(data => {
         this.loadUsers();
+        window.confirm('User Bloqué');
+        console.log(data);
+      });
+    }
+  }
+  debloquerUserlist(username: string) {
+    if (window.confirm('Vous etes sure de vouloir debloquer ce User ?')) {
+      // console.log(username);
+      this.userService.debloquerUserlist(username).subscribe(data => {
+        this.loadUsers();
+        window.confirm('User débloqué !');
         console.log(data);
       });
     }

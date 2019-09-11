@@ -15,7 +15,7 @@ export class PrestatairelistComponent implements OnInit {
   }
 
   loadPrestataire() {
-  return this.prestaService.getPrestalist().subscribe((data: Prestatairelist []) => {
+  return this.prestaService.getPrestalist().subscribe((data) => {
       this.Prestatairelist = data;
       console.log(data);
     },

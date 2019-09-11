@@ -1,0 +1,24 @@
+<div class="col-lg-5 container">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h2 style="text-align: center"> Authentification</h2></div>
+       <div class="panel-body">
+       <form class="Form col-lg-12">
+         <div class="form-group">
+           <label class="control-label">Username</label>
+           <input [(ngModel)]="loginUserData.username"  type="text" name="username"  class="form-control">
+         </div>
+         <div class="form-group">
+            <label class="control-label">Password </label>
+            <input [(ngModel)]="loginUserData.password" type="password" name="password" class="form-control">
+          </div>
+          <button (click)="login(loginUserData)" type="submit" class="btn btn-success">Login</button>
+       </form>
+      </div> 
+    </div>   
+    </div>
+    
+.container{
+    margin-top: 2%;
+    margin-left: 30%;
+    margin-right: 30%;
+}

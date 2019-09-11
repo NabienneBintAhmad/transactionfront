@@ -14,6 +14,7 @@ import { CompteComponent } from './compte/compte.component';
 import { CaissierlistComponent } from './caissierlist/caissierlist.component';
 import { PrestatairelistComponent } from './prestatairelist/prestatairelist.component';
 import { BlockusersystemComponent } from './blockusersystem/blockusersystem.component';
+import { UserlistComponent } from './userlist/userlist.component';
 import { AuthentGuard } from './guards/authent.guard';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch : 'full' },
@@ -30,7 +31,9 @@ const routes: Routes = [
   { path: 'compte', component: CompteComponent},
   { path: 'caissierlist', component: CaissierlistComponent},
   { path: 'prestatairelist', component: PrestatairelistComponent},
-  { path: 'blockusersystem', component: BlockusersystemComponent}
+  { path: 'blockusersystem', component: BlockusersystemComponent},
+  { path: 'userslist', component: UserlistComponent},
+  { path: 'blockuserpresta', component: BlocageComponent}
 
 ];
 

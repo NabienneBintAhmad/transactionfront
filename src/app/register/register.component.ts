@@ -27,7 +27,13 @@ export class RegisterComponent implements OnInit {
     this.registerService.registerUser(this.registrUserData)
       .subscribe(
         data => {
+          window.confirm('Inséré!');
           console.log(data);
+
+        },
+        err => {
+          window.confirm('Pas inséré!');
+          console.log(err);
 
         }
       );

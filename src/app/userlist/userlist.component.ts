@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { BlocageService } from '../services/blocage.service';
+import { UserService } from '../services/user.service';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-blocage',
-  templateUrl: './blocage.component.html',
-  styleUrls: ['./blocage.component.css']
+  selector: 'app-userlist',
+  templateUrl: './userlist.component.html',
+  styleUrls: ['./userlist.component.css']
 })
-export class BlocageComponent implements OnInit {
+export class UserlistComponent implements OnInit {
   Userlist: any = [];
-  constructor(private userService: BlocageService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     this.loadUsers();
   }
 
   loadUsers() {
-  return this.userService.getUserPresta().subscribe((data) => {
+  return this.userService.getUserlist().subscribe((data) => {
       this.Userlist = data;
       console.log(data);
     },
@@ -40,5 +40,4 @@ export class BlocageComponent implements OnInit {
       });
     }
   }
-
 }

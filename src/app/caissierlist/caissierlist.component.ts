@@ -17,7 +17,7 @@ Caissierlist: any = [];
 
   loadCaissiers() {
 
-  return this.caissierService.getCaissierlist().subscribe((data: Caissierlist []) => {
+  return this.caissierService.getCaissierlist().subscribe((data) => {
       this.Caissierlist = data;
       console.log(data);
     },
