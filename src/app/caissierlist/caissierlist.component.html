@@ -1,0 +1,48 @@
+
+<div class="col-md-9 align-content-center container">
+
+    <!-- Show it when there is no caissier -->
+    <div class="no-data text-center" >
+      <button class="btn btn-outline-primary" routerLink="/caissier">Ajout Caisier</button>
+    </div>
+  
+    <!-- caissierlists list table, it hides when there is no caissierlist -->
+    <div class="form-group col-lg-6">
+      <h3 class="mb-3 text-center">Liste Caissiers</h3>
+  
+      <div class="form-group col-lg-6">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Caissier Id</th>
+              <th scope="col">Nom</th>
+              <th scope="col">Prénom</th>
+              <th scope="col">Matricule</th>
+              <th scope="col">Adresse</th>
+              <th scope="col">Email</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Cni</th>
+              <th scope="col">Role</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let caissierlist of Caissierlist">
+              <td>{{caissierlist.id}}</td>
+              <td>{{caissierlist.nom}}</td>
+              <td>{{caissierlist.prenom}}</td>
+              <td>{{caissierlist.matricule}}</td>
+              <td>{{caissierlist.adresse}}</td>
+              <td>{{caissierlist.email}}</td>
+              <td>{{caissierlist.contact}}</td>
+              <td>{{caissierlist.cni}}</td>
+              <td>{{caissierlist.role}}</td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div>
+  
+  </div>

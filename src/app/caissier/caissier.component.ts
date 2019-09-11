@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CaissierComponent implements OnInit {
   caissierUserData = { imageFile: File = null };
-  imageUrl = 'assets/image/Capture d’écran de 2019-06-27 15-09-48.png';
+  imageUrl = 'assets/image/100-percent-halal.png';
 
   constructor(private caissierService: CaissierService, private router: Router) { }
 
@@ -33,14 +33,6 @@ export class CaissierComponent implements OnInit {
         }
       );
   }
-/*   depot() {
-    this.depotService.depot(this.depotData)
-      .subscribe(
-        data => {
-          console.log(data);
 
-        }
-      );
-  } */
 }
 

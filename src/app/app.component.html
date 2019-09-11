@@ -1,44 +1,128 @@
- <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#"> N@bienne's Transaction</a>
-      </div>
-      <ul class="nav nav-bar pull-right">
-        <li>
-           <a routerLink="/login" routerLinkActive="active">LogIn</a>
 
-         </li>
-         <li>
-          
-         </li>
-
-      </ul> 
-
-      <ul class="nav navbar-nav pull-left">
-          <li ><a routerLink="/acceuil" routerLinkActive="active">Accueil</a></li>
-          
-          <li *ngIf="isSuperadmin()" ><a routerLink="/register" routerLinkActive="active">Registration</a></li>
+  <div class="wrappe" >
+    <div class="sidebar" data-color="white" data-active-color="success">
+    <div class="logo">
+          <div class="logo-image-small float-left">
+            <img src="../assets/img/halal.jpg">
             
-          <li *ngIf="isSuperadmin()" ><a routerLink="/compte" routerLinkActive="active">Ajout Compte</a></li>
+      </div>
+      </div>
       
-          <li *ngIf="isSuperadmin()"><a routerLink="/bloquer" routerLinkActive="active">Bloquer UserSystem</a></li>
-          <li *ngIf="isSuperadmin()"><a routerLink="/caissier" routerLinkActive="active">Ajout Caissier</a></li>
-          <li *ngIf="isAdmin()"><a routerLink="/user" routerLinkActive="active">Ajout UserPrestataire</a></li>
-          <li *ngIf="isUser()"><a routerLink="/transaction" routerLinkActive="active">Envoie</a></li>
-          <li *ngIf="isAdmin()"><a routerLink="/admin" routerLinkActive="active">Bloquer UserPrestataire</a> </li>
-          <li *ngIf="isUser()"><a routerLink="/retrait" routerLinkActive="active">Retrait</a> </li>
-          <li *ngIf="isCaissier()"><a routerLink="/depot" routerLinkActive="active">Dépot</a> </li>
-      </ul>
+      <div class="sidebar-wrapper" data-active-color="success">
+        <ul class="nav">
 
+          <li class="active">
+            <a routerLink="acceuil">
+              <i class="nc-icon nc-bank"></i>
+              <p>H@LAL TRANSACTION</p>
+            </a>
+          </li>
+
+          <li *ngIf="isCaissier()">
+            <a href="#">
+              <i class="nc-icon nc-money-coins"></i>
+              <a routerLink="/depot" routerLinkActive="active" data-active-color="success">Dépot</a> 
+            </a>
+          </li>
+
+          <li *ngIf="isUser()">
+            <a href="./map.html">
+              <i class="nc-icon nc-send"></i>
+              <a routerLink="/transaction" routerLinkActive="active" data-active-color="success">Envoie</a>
+            </a>
+          </li>
+         
+          <li *ngIf="isSuperadmin()" >
+            <a href="#">  
+              <i class="nc-icon nc-single-02"></i>
+              <a routerLink="/register" routerLinkActive="active" data-active-color="success">Registration</a>
+            </a>
+          </li>
+          <li *ngIf="isSuperadmin()" >
+            <a href="#">
+              <i class="nc-icon nc-single-02"></i>
+              <a routerLink="/caissier" routerLinkActive="active" data-active-color="success">Ajout Caissier</a>
+            </a>
+          </li>
+
+          <li *ngIf="isSuperadmin()" >
+            <a href="#">
+              <i class="nc-icon nc-single-02"></i>
+              <a routerLink="/compte" routerLinkActive="active" data-active-color="success">Ajout Compte</a>
+            </a>
+          </li>
+
+          <li *ngIf="isSuperadmin()">
+            <a href="#" >
+              <i class="nc-icon nc-tile-56"></i>
+         
+              <a routerLink="/caissierlist" routerLinkActive="active" data-active-color="success">liste caissiers</a>
+            </a>
+          </li>
+
+          <li *ngIf="isSuperadmin()">
+            <a href="#">
+              <i class="nc-icon nc-tile-56"></i>
+              <a routerLink="/prestatairelist" routerLinkActive="active" data-active-color="success">liste prestataires</a>
+          
+            </a>
+          </li>
+
+          <li *ngIf="isAdmin()">
+            <a href="#">
+              <i class="nc-icon nc-key-25"></i>
+              <a routerLink="/admin" routerLinkActive="active" data-active-color="success">Bloquer UserPrestataire</a>
+            </a>
+          </li>
+
+          <li *ngIf="isSuperadmin()">
+            <a href="#">
+              <i class="nc-icon nc-key-25"></i>
+              <a routerLink="/blockusersystem" routerLinkActive="active" data-active-color="success">Bloquer UserSystem</a>
+            </a>
+          </li>
+
+          <li *ngIf="isAdmin()">
+            <a href="#">
+              <i class="nc-icon nc-single-02"></i>
+              <a routerLink="/user" routerLinkActive="active" data-active-color="success">Ajout User Prestataire</a>
+            </a>
+          </li>
+         
+          <li *ngIf="isUser()">
+            <a href="#">
+              <i class="nc-icon nc-money-coins"></i>
+              <a routerLink="/retrait" routerLinkActive="active" data-active-color="success">Retrait</a> 
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+  <nav class="navbar menu" > 
+    <div class="container-fluid" >
+  
+      <ul class="login">
+        <li>
+           <a *ngIf="isAuthenticated()" routerLink="/login" ><span class="glyphicon glyphicon-log-in"></span> LogIn          
+          </a>
+          <a *ngIf="!isAuthenticated()"  (click)="logedIn()"> LogOut        
+          </a>
+         </li>  
+      </ul> 
+  
     </div>
   </nav>
   
-  <div class="row">
-    <div class="col-md-2">
-      <app-login></app-login>
-    </div>
-    <div class="col-md-9">
-      <router-outlet></router-outlet>
+  
+   
     </div>
   </div>
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  
+
+
   

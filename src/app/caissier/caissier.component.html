@@ -1,24 +1,26 @@
 
-<div class="col-md-12">
+<div class="col-md-9 align-content-center container">
   <div class="panel panel-default">
     <div class="panel-heading" style="text-align:center"> <h1> Ajout Caissier</h1></div>
      <div class="panel-body">
      <form #imageForm=ngForm class="form" >
-         <div class="form-group">
-         <label class="control-label">Username</label>
-         <input [(ngModel)]="caissierUserData.username" type="text" name="username"  class="form-control">
-       </div>
-       <div class="form-group">
-          <label class="control-label">Password </label>
-          <input [(ngModel)]="caissierUserData.password" type="text" name="password" class="form-control">
+        <div class="row">
+            <div class="form-group col-lg-6">
+                <label class="control-label">Username</label>
+                <input [(ngModel)]="caissierUserData.username" type="text" name="username"  class="form-control">
+            </div>
+            <div class="form-group col-lg-6">
+                <label class="control-label">Password </label>
+                <input [(ngModel)]="caissierUserData.password" type="text" name="password" class="form-control">
+            </div>
         </div>
         
-
+<div class="row">
       <div class="form-group">
           <div class="col s8 offst-2">
               <div class="card-panel teal lighten-2">
                   <h4 class="center white-text">
-                      ImageFile
+                        Cliquer sur l'image pour choisir le evotre
                   </h4>
               </div>
           </div>
@@ -29,34 +31,39 @@
               <input  name="imageFile" type="file" #ImageFile accept="image/*" (change)="handleFileInput($event.target.files)">
           </div>
        </div>
-
-      
-        <div class="form-group">
+    </div>
+      <div class="row">
+        <div class="form-group col-lg-6">
             <label class="control-label">Prenom  </label>
             <input [(ngModel)]="caissierUserData.prenom" type="text" name="prenom" class="form-control">
           </div>
-          <div class="form-group">
+          <div class="form-group col-lg-6">
               <label class="control-label">Nom </label>
               <input [(ngModel)]="caissierUserData.nom" type="text" name="nom" class="form-control">
             </div>
-            <div class="form-group">
+     </div>
+     <div class="row">
+            <div class="form-group col-lg-6">
                 <label class="control-label">Conact </label>
                 <input [(ngModel)]="caissierUserData.contact" type="number" name="contact" class="form-control">
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-6">
                 <label class="control-label">Cni </label>
                 <input [(ngModel)]="caissierUserData.cni" type="number" name="cni" class="form-control">
             </div>
-            <div class="form-group">
+
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-6">
                 <label class="control-label">Adresse </label>
                 <input [(ngModel)]="caissierUserData.adresse" type="text" name="adresse" class="form-control">
             </div>
-            <div class="form-group">
+            <div class="form-group col-lg-6">
                 <label class="control-label">Email </label>
                 <input [(ngModel)]="caissierUserData.email" type="email" name="email" class="form-control">
             </div>
-           
-        <button (click)="ajoutCaissier()" type="submit" class="btn btn-success">register</button>
+        </div>
+        <button (click)="ajoutCaissier()" type="submit" class="btn btn-success pull-right">ajouter</button>
      </form>
     </div> 
   </div>   

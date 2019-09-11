@@ -1,13 +1,14 @@
-<div class="col-md-12">
+<div class="col-md-6 align-content-center container">
   <div class="panel panel-default">
-    <div class="panel-heading">Ajout Compte</div>
+    <div class="panel-heading"> <h2 style="text-align: center"> Ajout Compte</h2> </div>
      <div class="panel-body">
      <form class="Form" >
-       <div class="form-group">
+      <div class="row">
+      <div class="form-group col-lg-8">
          <label class="control-label">Matricule du prestataire</label>
          <input [(ngModel)]="compteData.matricule"  type="text" name="matricule" placeholder="19-NOOPrX" class="form-control">
-       </div>
-       
+      </div>
+      </div>
         <button (click)="compte()" type="submit" class="btn btn-success">Ajouter</button>
      </form>
     </div> 

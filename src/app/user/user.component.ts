@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class UserComponent implements OnInit {
   userData = { imageFile: File = null };
-  imageUrl = 'assets/image/Capture d’écran de 2019-06-27 15-09-48.png';
+  imageUrl = 'assets/image/100-percent-halal.png';
 
   constructor(private userService: UserService, private router: Router) { }
 

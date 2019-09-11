@@ -32,7 +32,7 @@ exp;
   saveToken(jwt: any) {
     localStorage.setItem('token', jwt['token']);
     this.jwt = jwt['token'];
-   
+    
     this.parseJWT();
     console.log(this.parseJWT());
   }

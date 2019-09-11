@@ -10,7 +10,8 @@ export class LoginComponent implements OnInit {
 loginUserData = {};
   constructor(private authentService: AuthentService , private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.router.navigateByUrl('/login');
   }
    isSuperadmin() {
     return this.authentService.isSuperadmin();
@@ -33,13 +34,14 @@ loginUserData = {};
   loggedIn() {
     return this.authentService.loggedIn ();
   }
-login(loginUserData) {
-  this.authentService.login(loginUserData)
+login() {
+  this.authentService.login(this.loginUserData)
     .subscribe(
       resp => {
         console.log(resp);
         const jwt: any = resp.body;
         this.authentService.saveToken(jwt);
+        this.router.navigateByUrl('/acceuil');
       },
       err => console.log(err)
     );

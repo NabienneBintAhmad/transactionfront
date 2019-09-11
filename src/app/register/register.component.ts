@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   registrUserData = { imageFile: File = null };
-  imageUrl = 'assets/image/Capture d’écran de 2019-06-27 15-09-48.png';
+  imageUrl = 'assets/image/100-percent-halal.png';
 
   constructor(private registerService: RegisterService, private router: Router) { }
 

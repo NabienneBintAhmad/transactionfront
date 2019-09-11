@@ -9,9 +9,6 @@ export class AppComponent {
   title = 'transactionfront';
   constructor(private authservice: AuthentService) {}
 
-   ngOnInit(): void {
-    this.authservice.loadToken();
-  }
   isSuperadmin() {
     return this.authservice.isSuperadmin();
   }

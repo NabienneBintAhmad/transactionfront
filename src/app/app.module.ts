@@ -20,6 +20,11 @@ import { BlocageComponent } from './blocage/blocage.component';
 import { DepotComponent } from './depot/depot.component';
 import { RetraitComponent } from './retrait/retrait.component';
 import { CompteComponent } from './compte/compte.component';
+import { CaissierlistComponent } from './caissierlist/caissierlist.component';
+import { MenuComponent } from './menu/menu.component';
+import { PrestatairelistComponent } from './prestatairelist/prestatairelist.component';
+import { BlockusersystemComponent } from './blockusersystem/blockusersystem.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +40,11 @@ import { CompteComponent } from './compte/compte.component';
     BlocageComponent,
     DepotComponent,
     RetraitComponent,
-    CompteComponent
+    CompteComponent,
+    CaissierlistComponent,
+    MenuComponent,
+    PrestatairelistComponent,
+    BlockusersystemComponent,
   ],
   imports: [
     BrowserModule,

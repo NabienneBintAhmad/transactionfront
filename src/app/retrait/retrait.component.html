@@ -1,24 +1,28 @@
-<div class="col-md-12">
+<div class="col-md-9 align-content-center container">
   <div class="panel panel-default">
-    <div class="panel-heading">Retrait</div>
+    <div class="panel-heading"> <h2 style="text-align: center">Retrait</h2></div>
      <div class="panel-body">
      <form class="Form" >
-       <div class="form-group">
+       <div class="row">
+       <div class="form-group col-lg-6 ">
          <label class="control-label">Code Retrait</label>
          <input [(ngModel)]="retraitData.code"  type="number" name="code"  class="form-control">
        </div>
-       <div class="form-group">
+       <div class="form-group col-lg-6 ">
           <label class="control-label">Nom Envoyeur </label>
           <input [(ngModel)]="retraitData.envoyeurNomComplet" type="text" name="envoyeurNomComplet" class="form-control">
         </div>
-        <div class="form-group">
+      </div>
+      <div class="row">
+        <div class="form-group col-lg-6 ">
           <label class="control-label">Nom Recepteur </label>
           <input [(ngModel)]="retraitData.recepteurNomComplet" type="text" name="recepteurNomComplet" class="form-control">
         </div>
-        <div class="form-group">
+        <div class="form-group col-lg-6 ">
           <label class="control-label">Cni Recepteur </label>
           <input [(ngModel)]="retraitData.recepteurCni" type="number" name="recepteurCni" class="form-control">
         </div>
+      </div>
         <button (click)="retrait()" type="submit" class="btn btn-success">Retirer</button>
      </form>
     </div> 

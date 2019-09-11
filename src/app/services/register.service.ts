@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterService {
   private endpoint = 'http://127.0.0.1:8000/api/register';
+  private endpoint1 = 'http://127.0.0.1:8000/api/listpresta';
   constructor(private httpClient: HttpClient) {}
   registerUser(formData) {
     const formData1: FormData = new FormData();
@@ -28,5 +29,8 @@ export class RegisterService {
     formData1.append('email', formData.email);
     console.log(formData);
     return this.httpClient.post<any>(this.endpoint, formData1, {observe: 'response'});
+    }
+    getPrestalist() {
+      return this.httpClient.get<any>(this.endpoint1);
     }
 }

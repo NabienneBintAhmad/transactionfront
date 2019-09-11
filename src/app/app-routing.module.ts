@@ -11,8 +11,12 @@ import { BlocageComponent } from './blocage/blocage.component';
 import { DepotComponent } from './depot/depot.component';
 import { RetraitComponent } from './retrait/retrait.component';
 import { CompteComponent } from './compte/compte.component';
+import { CaissierlistComponent } from './caissierlist/caissierlist.component';
+import { PrestatairelistComponent } from './prestatairelist/prestatairelist.component';
+import { BlockusersystemComponent } from './blockusersystem/blockusersystem.component';
 import { AuthentGuard } from './guards/authent.guard';
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch : 'full' },
   { path: 'login', component: LoginComponent},
   { path: 'user', component: UserComponent},
   { path: 'acceuil', component: AcceuilComponent},
@@ -23,7 +27,10 @@ const routes: Routes = [
   { path: 'bloquer', component: BlocageComponent},
   { path: 'depot', component: DepotComponent},
   { path: 'retrait', component: RetraitComponent},
-  { path: 'compte', component: CompteComponent}
+  { path: 'compte', component: CompteComponent},
+  { path: 'caissierlist', component: CaissierlistComponent},
+  { path: 'prestatairelist', component: PrestatairelistComponent},
+  { path: 'blockusersystem', component: BlockusersystemComponent}
 
 ];
 

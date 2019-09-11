@@ -1,0 +1,52 @@
+
+<div class="container custom-container-2 align-content-center">
+
+    <!-- Show it when there is noprestataire -->
+    <div class="no-data text-center" >
+      <button class="btn btn-outline-primary" routerLink="/register">Registration</button>
+    </div>
+  
+    <!--prestatairelists list table, it hides when there is noprestatairelist -->
+    <div>
+      <h3 class="mb-3 text-center">Liste prestataires</h3>
+  
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Prestataire Id</th>
+              <th scope="col">Nom</th>
+              <th scope="col">Prénom</th>
+              <th scope="col">Nom entreprise</th>
+              <th scope="col">Adresse</th>
+              <th scope="col">Email</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Cni</th>
+              <th scope="col">Matricule</th>
+              <th scope="col">Compte</th>
+              <th scope="col">Ninéa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let prestatairelist of Prestatairelist">
+              <td>{{prestatairelist.id}}</td>
+              <td>{{prestatairelist.nom}}</td>
+              <td>{{prestatairelist.prenom}}</td>
+              <td>{{prestatairelist.nomEntreprise}}</td>
+              <td>{{prestatairelist.adresse}}</td>
+              <td>{{prestatairelist.email}}</td>
+              <td>{{prestatairelist.contact}}</td>
+              <td>{{prestatairelist.cni}}</td>
+              <td>{{prestatairelist.matricule}}</td>
+              <td>{{prestatairelist.compte}}</td>
+              <td>{{prestatairelist.ninea}}</td>
+               <td>{{prestatairelist.ninea}}</td>
+             
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    </div>
+  
+  </div>
