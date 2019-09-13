@@ -1,0 +1,22 @@
+<div class="col-md-6 align-content-center container">
+    <div class="panel panel-default">
+      <div class="panel-heading"> <h2 style="text-align: center"> Ajout Compte de travail</h2> </div>
+       <div class="panel-body">
+       <form class="Form" >
+        <div class="row">
+        <div class="form-group col-lg-8">
+           <label class="control-label">Username Utilisateur</label>
+           <input [(ngModel)]="compteData.username"  type="text" name="username" placeholder="user@gmail.com" class="form-control">
+        </div>
+        <div class="form-group col-lg-8">
+            <label class="control-label">Numero Compte</label>
+            <input [(ngModel)]="compteData.numero"  type="number" name="numero" placeholder="101258741" class="form-control">
+         </div>
+        </div>
+          <button (click)="comptetravail()" type="submit" class="btn btn-success">Ajouter</button>
+       </form>
+      </div> 
+    </div>   
+    </div>
+  
+    

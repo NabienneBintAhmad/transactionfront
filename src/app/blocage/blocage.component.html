@@ -21,6 +21,7 @@
 				  <th scope="col">Statut</th>
 				  <th scope="col">Photo</th>
 				  <th scope="col">Date</th>
+				  <th scope="col">Compte</th>
 				  <th scope="col">Blocage</th>
 				</tr>
 			  </thead>
@@ -32,6 +33,7 @@
 				  <td>{{userlist.statut}}</td>
 				  <td>{{userlist.imageName}}</td>
 				  <td>{{userlist.updatedAt}}</td>
+				  <td>{{userlist.compteTravail}}</td>
 				 
 				  <td>
 						<button *ngIf="userlist.statut == 'Debloquer'" class="btn btn-outline-danger" (click)="bloquerUserlist(userlist.username)">Bloquer</button>

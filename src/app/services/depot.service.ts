@@ -6,6 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class DepotService {
 
   private endpoint = 'http://127.0.0.1:8000/api/depot';
+  private endpoint1 = 'http://127.0.0.1:8000/api/listdepot';
   constructor(private httpClient: HttpClient) {}
   depot(formData) {
     const formData1: FormData = new FormData();
@@ -13,5 +14,8 @@ export class DepotService {
     formData1.append('montant', formData.montant);
     console.log(formData);
     return this.httpClient.post<any>(this.endpoint, formData1, {observe: 'response'});
+    }
+    getDepotlist() {
+      return this.httpClient.get<any>(this.endpoint1);
     }
 }

@@ -29,6 +29,7 @@ export class UserComponent implements OnInit {
         data => {
           window.confirm('Inséré!');
           console.log(data);
+          this.router.navigateByUrl('/userslist');
 
         },
         err => {

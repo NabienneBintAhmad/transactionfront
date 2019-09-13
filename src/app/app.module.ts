@@ -25,6 +25,10 @@ import { MenuComponent } from './menu/menu.component';
 import { PrestatairelistComponent } from './prestatairelist/prestatairelist.component';
 import { BlockusersystemComponent } from './blockusersystem/blockusersystem.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { ComptelistComponent } from './comptelist/comptelist.component';
+import { AllcompteComponent } from './allcompte/allcompte.component';
+import { ComptetravailComponent } from './comptetravail/comptetravail.component';
+import { DepothistoriqueComponent } from './depothistorique/depothistorique.component';
 
 
 @NgModule({
@@ -47,6 +51,10 @@ import { UserlistComponent } from './userlist/userlist.component';
     PrestatairelistComponent,
     BlockusersystemComponent,
     UserlistComponent,
+    ComptelistComponent,
+    AllcompteComponent,
+    ComptetravailComponent,
+    DepothistoriqueComponent,
   ],
   imports: [
     BrowserModule,

@@ -24,6 +24,13 @@
             </a>
           </li>
 
+          <li *ngIf="isCaissier()">
+              <a href="#">
+                <i class="nc-icon nc-tile-56"></i>
+                <a routerLink="/listdepot" routerLinkActive="active" data-active-color="success">Historique</a> 
+              </a>
+            </li>
+
           <li *ngIf="isUser()">
             <a href="./map.html">
               <i class="nc-icon nc-send"></i>
@@ -46,7 +53,7 @@
 
           <li *ngIf="isSuperadmin()" >
             <a href="#">
-              <i class="nc-icon nc-single-02"></i>
+              <i class="nc-icon nc-money-coins"></i>
               <a routerLink="/compte" routerLinkActive="active" data-active-color="success">Ajout Compte</a>
             </a>
           </li>
@@ -72,7 +79,29 @@
                 <i class="nc-icon nc-tile-56"></i>
                 <a routerLink="/userslist" routerLinkActive="active" data-active-color="success">liste Users</a>
               </a>
+          </li>
+
+          <li *ngIf="isAdmin()">
+              <a href="#">
+                <i class="nc-icon nc-money-coins"></i>
+                <a routerLink="/mycount" routerLinkActive="active" data-active-color="success">Mes comptes</a>
+              </a>
             </li>
+
+            <li *ngIf="isAdmin()">
+                <a href="#">
+                  <i class="nc-icon nc-money-coins"></i>
+                  <a routerLink="/comptetravail" routerLinkActive="active" data-active-color="success">Compte de travail</a>
+                </a>
+              </li>
+
+            <li *ngIf="isSuperadmin()">
+                <a href="#">
+                  <i class="nc-icon nc-money-coins"></i>
+                  <a routerLink="/listcompte" routerLinkActive="active" data-active-color="success">Liste comptes</a>
+                </a>
+              </li>
+  
 
             <li *ngIf="isAdmin()">
               <a href="#">
@@ -115,7 +144,7 @@
         <li>
            <a *ngIf="!isAuthenticated()" routerLink="/login" ><span class="glyphicon glyphicon-log-in"></span> LogIn          
           </a>
-          <a *ngIf="isAuthenticated()"  style="cursor: pointer" routerLink="/login" (click)="logout()"> <span class="glyphicon glyphicon-log-in"></span>  LogOut        
+          <a *ngIf="isAuthenticated()"  style="cursor: pointer" routerLink="/login" (click)="logout()"> LogOut  <span class="glyphicon glyphicon-log-in"></span>        
           </a>
          </li>  
       </ul> 

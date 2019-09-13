@@ -31,7 +31,12 @@ export class CaissierComponent implements OnInit {
          window.confirm('Caissier ajouté');
          console.log(data);
 
-        }
+        },
+        err => {
+          window.confirm('Pas inserré, avez vous choisi ume image? Vérifiez vos champs');
+          console.log(err);
+          }
+
       );
   }
 

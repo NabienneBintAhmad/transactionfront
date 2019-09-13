@@ -2,28 +2,31 @@ import { Component, OnInit } from '@angular/core';
 import { CompteService } from '../services/compte.service';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-compte',
-  templateUrl: './compte.component.html',
-  styleUrls: ['./compte.component.css']
+  selector: 'app-comptetravail',
+  templateUrl: './comptetravail.component.html',
+  styleUrls: ['./comptetravail.component.css']
 })
-export class CompteComponent implements OnInit {
+export class ComptetravailComponent implements OnInit {
 
   compteData = {};
   constructor(private transactionService: CompteService, private router: Router) { }
   ngOnInit() {
   }
 
-  compte() {
-    this.transactionService.compte(this.compteData)
+  comptetravail() {
+    this.transactionService.comptetravail(this.compteData)
       .subscribe(
         data => {
-          window.confirm('Compte ajouté');
+          window.confirm('compte alloué');
           console.log(data);
+          this.router.navigateByUrl('/blockuserpresta');
         },
         err => {
-          window.confirm('Ajout échoué');
+          window.confirm('compte pas alloué !');
           console.log(err);
         }
       );
   }
+
+
 }

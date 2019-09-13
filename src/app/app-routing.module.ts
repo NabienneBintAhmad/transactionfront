@@ -14,7 +14,11 @@ import { CompteComponent } from './compte/compte.component';
 import { CaissierlistComponent } from './caissierlist/caissierlist.component';
 import { PrestatairelistComponent } from './prestatairelist/prestatairelist.component';
 import { BlockusersystemComponent } from './blockusersystem/blockusersystem.component';
+import { ComptelistComponent } from './comptelist/comptelist.component';
+import { AllcompteComponent } from './allcompte/allcompte.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { ComptetravailComponent } from './comptetravail/comptetravail.component';
+import { DepothistoriqueComponent } from './depothistorique/depothistorique.component';
 import { AuthentGuard } from './guards/authent.guard';
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch : 'full' },
@@ -33,7 +37,11 @@ const routes: Routes = [
   { path: 'prestatairelist', component: PrestatairelistComponent},
   { path: 'blockusersystem', component: BlockusersystemComponent},
   { path: 'userslist', component: UserlistComponent},
-  { path: 'blockuserpresta', component: BlocageComponent}
+  { path: 'blockuserpresta', component: BlocageComponent},
+  { path: 'mycount', component: ComptelistComponent},
+  { path: 'listcompte', component: AllcompteComponent},
+  { path: 'listdepot', component: DepothistoriqueComponent},
+  { path: 'comptetravail', component: ComptetravailComponent}
 
 ];
 

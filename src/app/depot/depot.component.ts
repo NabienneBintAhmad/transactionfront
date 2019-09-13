@@ -18,10 +18,16 @@ export class DepotComponent implements OnInit {
     this.depotService.depot(this.depotData)
       .subscribe(
         resp => {
+          window.confirm('Dépot réussi');
           console.log(resp);
+          this.router.navigateByUrl('/listdepot');
 
         },
-        err => console.log(err)
+        err => {
+          window.confirm('Dépot échoué');
+          console.log(err);
+
+        }
       );
   }
 }
